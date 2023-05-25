@@ -8,7 +8,8 @@ let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 
-let Name = "Divyanshu";
+
+let Name = prompt("Enter your name: "); 
 let chips = Math.floor(Math.random() * 50) + 100;
 
 let playerEl = document.getElementById("player-el");
@@ -39,6 +40,8 @@ function startGame(){
         hasBlackJack = false;
         renderGame();
     }
+    let alertEl = document.getElementById("alert-el");
+        alertEl.textContent = "";
 }
 
 function renderGame(){

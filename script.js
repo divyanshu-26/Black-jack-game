@@ -16,6 +16,8 @@ let playerEl = document.getElementById("player-el");
 playerEl.textContent = Name + ": $" + chips;
 chips = parseInt(chips);
 
+let alertEl = document.getElementById("alert-el");
+
 function getRandomCard(){
     let randomNumber = Math.floor(Math.random() * 13) + 1;
     if (randomNumber > 10){
@@ -40,7 +42,6 @@ function startGame(){
         hasBlackJack = false;
         renderGame();
     }
-    let alertEl = document.getElementById("alert-el");
         alertEl.textContent = "";
 }
 
@@ -63,7 +64,6 @@ function renderGame(){
     }
     else{
         message = "You're out of the game!"
-        let alertEl = document.getElementById("alert-el");
         alertEl.textContent = "START AGAIN!!"
         isAlive = false;
         chips -=1;
